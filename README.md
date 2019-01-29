@@ -1,2 +1,0 @@
-# zolotoy-toster
-landing
