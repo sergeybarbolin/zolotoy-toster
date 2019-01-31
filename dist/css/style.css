@@ -183,6 +183,16 @@ main {
   bottom: 125px;
   right: 107px; }
 
+.toster_circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 175px;
+  right: 155px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #f2f2f2; }
+
 .toster_text {
   font-size: 36px;
   font-weight: 400;
@@ -207,306 +217,39 @@ main {
   .toster_btn:hover {
     background-color: #d90f74; }
 
-@-webkit-keyframes shake {
-  2% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  4% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  6% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg); }
-  8% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  10% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  12% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  14% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  16% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  18% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  20% {
-    -webkit-transform: rotate(-5.5deg);
-            transform: rotate(-5.5deg); }
-  22% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  24% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  26% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  28% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  30% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  32% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  34% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  36% {
-    -webkit-transform: rotate(5.5deg);
-            transform: rotate(5.5deg); }
-  38% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg); }
-  40% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  42% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  44% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  46% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  48% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  50% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  52% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  54% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  56% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  58% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  60% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  62% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  64% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  66% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  68% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  70% {
-    -webkit-transform: rotate(-2.5deg);
-            transform: rotate(-2.5deg); }
-  72% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  74% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  76% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  78% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  80% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  82% {
-    -webkit-transform: rotate(6.5deg);
-            transform: rotate(6.5deg); }
-  84% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  86% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  88% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  90% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  92% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  94% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  96% {
-    -webkit-transform: rotate(-5.5deg);
-            transform: rotate(-5.5deg); }
-  98% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  0%, 100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); } }
+.confetti {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0; }
 
-@keyframes shake {
-  2% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  4% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  6% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg); }
-  8% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  10% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  12% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  14% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  16% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  18% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  20% {
-    -webkit-transform: rotate(-5.5deg);
-            transform: rotate(-5.5deg); }
-  22% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  24% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  26% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  28% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  30% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  32% {
-    -webkit-transform: rotate(4.5deg);
-            transform: rotate(4.5deg); }
-  34% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  36% {
-    -webkit-transform: rotate(5.5deg);
-            transform: rotate(5.5deg); }
-  38% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg); }
-  40% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  42% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg); }
-  44% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  46% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  48% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  50% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  52% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  54% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  56% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  58% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  60% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  62% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  64% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  66% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  68% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  70% {
-    -webkit-transform: rotate(-2.5deg);
-            transform: rotate(-2.5deg); }
-  72% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  74% {
-    -webkit-transform: rotate(-3.5deg);
-            transform: rotate(-3.5deg); }
-  76% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  78% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  80% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  82% {
-    -webkit-transform: rotate(6.5deg);
-            transform: rotate(6.5deg); }
-  84% {
-    -webkit-transform: rotate(0.5deg);
-            transform: rotate(0.5deg); }
-  86% {
-    -webkit-transform: rotate(3.5deg);
-            transform: rotate(3.5deg); }
-  88% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  90% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  92% {
-    -webkit-transform: rotate(-4.5deg);
-            transform: rotate(-4.5deg); }
-  94% {
-    -webkit-transform: rotate(-0.5deg);
-            transform: rotate(-0.5deg); }
-  96% {
-    -webkit-transform: rotate(-5.5deg);
-            transform: rotate(-5.5deg); }
-  98% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg); }
-  0%, 100% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0); } }
+.confetti_item {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100px;
+  margin: 0 auto;
+  z-index: -2; }
+
+.load-content {
+  padding: 25px 195px;
+  display: none;
+  opacity: 0; }
+
+.load-content_title {
+  color: #ec107d;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 25px auto 20px; }
+
+.load-content_description {
+  color: #010101;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 25px; }

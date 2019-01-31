@@ -14,14 +14,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 	const tosterBtn = document.querySelector('.toster_btn');
+	const toster = document.querySelector('.toster');
+	const header = document.querySelector('.header');
+	const gameWrapper = document.querySelector('.game-wrapper');
+	const confettiItem = document.querySelector('.confetti_item');
+
+	const createConfetti = (() => {
+		const confetti = document.querySelector('.confetti');
+		const countConfettiItems = 100;
+		const confettiColors = [
+			'#ffe89e',
+			'#e8a270',
+			'#ff797c',
+			'#cf89e8',
+			'#979cff'
+		];
+		const fragment = document.createDocumentFragment();
+		for (let i = 0; i < countConfettiItems; i++) {
+			let el = document.createElement('div');
+			el.classList.add('confetti_item');
+			el.style.backgroundColor = confettiColors[Math.floor(Math.random() * confettiColors.length)];
+			fragment.appendChild(el);
+		}
+	  confetti.appendChild(fragment);
+	})();
+
 
 	const rotations = [];
 	for (let i = 0; i < 100; i++) {
 		rotations.push({'rotate': anime.random(-5,5)});		
 	};
 
+
 	const shake = anime({
-		targets: '.toster',
+		targets: toster,
 		keyframes: rotations,
 		autoplay: false,
 		duration: 1000,
@@ -65,9 +91,68 @@ document.addEventListener('DOMContentLoaded', function() {
 	  	}
 	});
 
+	const circleScale = anime({
+		targets: '.toster_circle',
+		scale: 70,
+		background: '#ffffff',
+		easing: 'linear',
+		duration: 500,
+		autoplay: false,
+		complete: function(anim) {
+	    	displayContent();
+	  	},
+
+	});
+
+	const loadContentShow = anime({
+		targets: '.load-content',
+		opacity: 1,
+		easing: 'linear',
+		duration: 700,
+		autoplay: false,
+
+	});
+
+	const confettiRun = anime({
+		targets: '.confetti_item',
+		translateY: -header.clientHeight - confettiItem.offsetTop - 100,
+		duration: function() { return anime.random(300, 700); },
+		translateX: function() {return anime.random(-gameWrapper.clientWidth/2, gameWrapper.clientWidth/2) },
+		autoplay: false,
+		easing: 'linear',
+		complete: function(anim) {
+	    	circleScale.play();
+	  	},
+	});
+
+	const loadContent = anime({
+		targets: '.load-content',
+		display: 'block',
+		duration: 0,
+		autoplay: false
+	});
+
+	const contentWrapper = document.querySelector('.load-content');
+	const gameTitle = document.querySelector('.game-title');
+
+	const displayContent = () => {
+		toster.style.display = 'none';
+		gameTitle.style.display = 'none';
+		contentWrapper.style.display = 'block';
+		loadContentShow.play();
+	} 
+
 	const playGame = () => {
 		tosterText.play();
 		flyBtn.play();
+		setTimeout(pauseGame, 5000);
+	}
+
+	const pauseGame = () => {
+		toster.style.transform = 'rotate(0)';
+		tosterRegulator.pause();
+		shake.pause();
+		confettiRun.play();
 	}
 
 
@@ -77,7 +162,4 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 
-// const gamePlay = (shake) => {
-// 	shake.restart;
-// };
 
