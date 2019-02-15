@@ -26,7 +26,7 @@
     font-family: 'Futuris';
     src: url('../fonts/subset-Futuris.eot');
     src: url('../fonts/subset-Futuris.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/subset-Futuris.woff2') format('woff2'),
+/*        url('../fonts/subset-Futuris.woff2') format('woff2'),*/
         url('../fonts/subset-Futuris.woff') format('woff'),
         url('../fonts/subset-Futuris.ttf') format('truetype'),
         url('../fonts/subset-Futuris.svg#Futuris') format('svg');

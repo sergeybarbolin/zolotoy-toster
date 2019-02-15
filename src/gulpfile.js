@@ -9,7 +9,7 @@ var 	gulp 				  = require('gulp'), //подкл gulp
 	   	autoprefixer 	= require ('gulp-autoprefixer'),
 		  notify 				= require("gulp-notify"),
 		  tinypng 			= require('gulp-tinypng-compress'),
-		  cheerio       = require('gulp-cheerio');
+		  cheerio       = require('gulp-cheerio')
 
 
 

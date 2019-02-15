@@ -4,64 +4,152 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:site_name" content="ЗОЛОТОЙ" />
+	<meta property="og:url" content="https://zolotoy.ru/tests/kuda-vedut-vashi-otnoshenija/" />
+	<meta property="og:locale" content="ru_RU" />
+	<meta property="og:description" content='Журнал "Золойтой". 8 марта' />
+	<meta property="og:title" content="Куда ведут ваши отношения?" />
+	<meta property="og:type" content="article" />
+	<meta property="og:image" content="https://zolotoy.ru/wp-content/uploads/2019/02/1200-9-1200x600.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="600" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content='Журнал "Золойтой". 8 марта' />
+	<meta name="twitter:image" content="https://zolotoy.ru/wp-content/uploads/2019/02/1200-9-1200x600.jpg" />
+	<meta name="twitter:description" content="женский журнал" />
     <title>8 марта</title>
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 	<link rel='stylesheet' id='fonts-css'  href='css/fonts.css' type='text/css' media='all' />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-    <script src="/js/script.js"></script>
+    <script src="js/anime.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-	<header class="section header">
-		<a href="/" class="logo"><img src="img/logo.png" alt=""></a>
-		<nav class="h-nav h-nav__desktop">
-			<a href="" class="h-nav_item">Lifestyle</a>
-			<a href="" class="h-nav_item">Стиль и красота</a>
-			<a href="" class="h-nav_item">Cемья</a>
-			<a href="" class="h-nav_item">Знаменитости</a>
-			<button type="button" class="btn-search">
-				<svg role="img" width="35" height="35">
-					<use xlink:href="img/sprite.svg#search"></use> 
-				</svg>
-			</button>
 
-		</nav>
+	<header class="section header">
+		<button class="burger">
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+			<span class="burger__line"></span>
+		</button>
+		<a href="/" class="logo"><img src="img/logo.png" alt=""></a>
+		<button type="button" class="btn-search desktop-h">
+			<svg role="img" >
+				<use xlink:href="img/sprite.svg#search"></use> 
+			</svg>
+		</button>
+			<nav class="main-nav main-nav_desktop  mob-h">
+				<a href="" class="main-nav__item main-nav__item_desktop">Lifestyle</a>
+				<a href="" class="main-nav__item main-nav__item_desktop">Стиль и красота</a>
+				<a href="" class="main-nav__item main-nav__item_desktop">Cемья</a>
+				<a href="" class="main-nav__item main-nav__item_desktop">Знаменитости</a>
+				<button type="button" class="btn-search">
+					<svg role="img" >
+						<use xlink:href="img/sprite.svg#search"></use> 
+					</svg>
+				</button>
+			</nav>
 	</header>
+
+	<nav class="section main-nav main-nav_mobile desktop-h">
+		<div class="main-nav__header">
+			<span>Рубрики</span>
+			<button class="btn-close btn-close_main-nav">
+				<span class="btn-close__line"></span>
+				<span class="btn-close__line"></span>
+			</button>
+		</div>
+
+		<a href="" class="main-nav__item main-nav__item_mobile">Новости</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Стиль и красота</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Lifestyle</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">ЗНАМЕНИТОСТИ</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Семья</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Личный опыт</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Тесты</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Золотой фонд</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Золотые слова</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Золотые правила</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Свадьба</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Спецпроекты</a>
+		<a href="" class="main-nav__item main-nav__item_mobile">Культпривет</a>
+
+	</nav>
+
 	<main class="section">
 		<div class="game-wrapper">
+
 			<p class="game-title">Генератор идеальных подарков</p>
+
 			<div class="toster">
 
-				<svg class="toster_body" role="img">
-					<use xlink:href="img/sprite.svg#toster3"></use> 
+				<svg class="toster__body" role="img">
+					<use xlink:href="img/sprite.svg#toster"></use> 
 				</svg>
 
-				<svg class="toster_regulator" role="img">
+				<svg class="toster__regulator" role="img">
 					<use xlink:href="img/sprite.svg#regulator"></use> 
 				</svg>
 
-				<div class="toster_circle">
-					<div class="confetti_item"></div>
+				<div class="toster__circle">
+					
 				</div>
 
-				<div class="confetti"></div>
+				<!-- <div class="confetti"><div class="confetti__item"></div></div> -->
 
-				<p class="toster_text">Чем побаловать себя 8 марта?</p>
+				<p class="toster__text mob-h">Чем побаловать себя 8 марта?</p>
 
-				<button class="toster_btn">Начать игру</button>
+				<button class="button button_first-run">Начать игру</button>
 
 			</div>
+
 			<div class="load-content">
-				<img src="img/content-img.jpg" alt="" class="load-content_img">
-				<p class="load-content_title">Колье</p>
-				<p class="load-content_description">Роскошный подарок для роскошной тебя! Колье – это не какая-нибудь там подвеска или цепочка, оно обязывает надеть вечерний наряд в лучших традициях красных дорожек и сразить всех наповал. Не забудь <br/> пригласить самых завистливых подружек.</p>
-				<button class="toster_btn">Хочу ещё!</button>
+				<img src="img/content-img.jpg" alt="" class="load-content__img">
+				<p class="load-content__title">Колье</p>
+				<p class="load-content__description">Роскошный подарок для роскошной тебя! Колье – это не какая-нибудь там<br/> подвеска или цепочка, оно обязывает надеть вечерний наряд в лучших<br/> традициях красных дорожек и сразить всех наповал. Не забудь <br/> пригласить самых завистливых подружек.</p>
+				<button class="button button_restar">Хочу ещё!</button>
 			</div>
+
+			<div class="sharing">
+				<p class="sharing__title">Поделитесь с друзьями</p>
+				<div class="sharing__items">
+
+					<a href="" class="sharing__item sharing__item_vk">
+						<svg role="img" >
+							<use xlink:href="img/sprite.svg#vk"></use> 
+						</svg>
+						<span>8.2 K</span>
+					</a>
+
+					<a href="" class="sharing__item sharing__item_fb">
+						<svg role="img" >
+							<use xlink:href="img/sprite.svg#fb"></use> 
+						</svg>
+						<span>9.5 K</span>
+					</a>
+
+<!-- 					<a href="" class="sharing__item sharing__item_tw">
+						<svg role="img" >
+							<use xlink:href="img/sprite.svg#tw"></use> 
+						</svg>
+					</a> -->
+
+					<a href="" class="sharing__item sharing__item_ok">
+						<svg role="img" >
+							<use xlink:href="img/sprite.svg#ok"></use> 
+						</svg>
+						<span>1.6 K</span>
+					</a>
+
+				</div>
+			</div>
+
 		</div>
 
 	</main>
 	<footer class="section footer">
-		<p class="about-text">© 2018 "Золотой". Интернет-журнал для девушек о стиле, красоте и развлечениях.<br/> Использование материалов журнала "Золотой" разрешено только с предварительного согласия правообладателей. 16+</p>
+<!-- 		<p class="about-text">© 2018 "Золотой". Интернет-журнал для девушек о стиле, красоте и развлечениях.<br/> Использование материалов журнала "Золотой" разрешено только с предварительного согласия правообладателей. 16+</p> -->
 	</footer>
 	<div class="banner-bg">
 		<a href="https://www.gold585.ru/" target="_blank"><img src="img/banner-bg.jpg" alt=""></a>
