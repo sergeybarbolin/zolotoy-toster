@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "babel": "^6.23.0",
     "browser-sync": "^2.26.3",
     "del": "^2.2.2",
     "gulp": "^3.9.1",

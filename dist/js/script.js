@@ -143,8 +143,19 @@ document.addEventListener('DOMContentLoaded', function () {
 		gameTitle.style.display = 'none';
 		circleScale.reset();
 		contentWrapper.style.display = 'block';
-		// location.hash = 'test';
+		history.pushState(null, null, "#newHash");
 		loadContentShow.restart();
+
+
+
+		share.rewriteHash = '#newHash';
+		share.rewriteTitle = 'newTitle';
+		share.rewriteImg = 'https://zolotoy.ru/wp-content/uploads/2018/11/viber-image-2019-02-18-12.02.11-1200x600.jpg';
+
+		newOgValue(ogUrl, share._siteUrl + share._hash);
+		newOgValue(ogTitle, share._title);
+		newOgValue(ogDescription, share._description);
+		newOgValue(ogImage, share._img);
 	};
 
 	var restartGame = function restartGame() {
@@ -152,10 +163,9 @@ document.addEventListener('DOMContentLoaded', function () {
 		gameTitle.style.display = 'block';
 		flyBtn.reset();
 		tosterText.reset();
-		// location.hash = '';
+		history.pushState(null, null, "?");
 		firstRunButton.style.display = 'inline-block';
 		contentWrapper.style.display = 'none';
-		// playGame();
 		flyToster.play();
 	};
 
@@ -195,4 +205,90 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	burger.onclick = openMainNav;
 	closeBtnMainNav.onclick = closeMainNav;
+
+	var vkShareBtn = document.querySelector('.sharing__item_vk');
+	var fbShareBtn = document.querySelector('.sharing__item_fb');
+	var okShareBtn = document.querySelector('.sharing__item_ok');
+	
+	vkShareBtn.onclick = share.vk;
+	fbShareBtn.onclick = share.fb;
+	okShareBtn.onclick = share.ok;
+
+
+	var ogUrl = document.querySelector('meta[property="og:url"]');
+	var ogDescription = document.querySelector('meta[property="og:description"]');
+	var ogTitle = document.querySelector('meta[property="og:title"]');
+	var ogImage = document.querySelector('meta[property="og:image"]');
+
+	var newOgValue = function(meta, value) {
+		meta.setAttribute('content', value)
+	}
+
+
+
 }, false);
+
+
+
+
+var share = {
+	_siteUrl: 'https://zolotoy.ru/',
+	_hash: '',
+	_title: 'Журнал "Золотой" | 8 марта',
+	_img: 'https://zolotoy.ru/wp-content/uploads/2019/02/kianul-1200x766.jpg',
+	_description: 'Описание',
+
+	set rewriteHash(value) {
+		this._hash = value;
+	},
+	set rewriteTitle(value) {
+		this._title = value;
+	},
+	set rewriteImg(value) {
+		this._img = value;
+	},
+	set rewriteDesctiption(value) {
+		this._desctiption = value;
+	},
+
+	vk: function() {
+
+		var url  = 'http://vkontakte.ru/share.php?';
+		
+		url += 'url='          + share._siteUrl + encodeURIComponent(share._hash);
+		url += '&title='       + encodeURIComponent(share._title);
+		url += '&image='       + encodeURIComponent(share._img);
+		url += '&noparse=false';
+
+		share.popup(url);
+		
+	},
+
+	fb: function() {
+
+		var url  = 'https://www.facebook.com/sharer/sharer.php?u=';
+		url += share._siteUrl;
+		share.popup(url);
+
+
+	},
+
+	ok: function() {
+
+		var url = 'https://connect.ok.ru/offer?';
+
+		url += 'url='          + share._siteUrl + encodeURIComponent(share._hash);
+		url += '&title='       + encodeURIComponent(share._title);
+		url += '&imageUrl='    + encodeURIComponent(share._img);
+
+		share.popup(url);
+	},
+
+
+
+	popup: function(url) {
+		window.open(url,'','toolbar=0,status=0,width=626,height=436');
+	}
+
+
+};
